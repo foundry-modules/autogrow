@@ -44,8 +44,10 @@ $.fn.autogrow = function(options) {
 				.addClass('shadow')
 				.css(
 				{
-					'visibility' : 'hidden',
-					'height'     : 0
+					visibility: 'hidden',
+					height: 0,
+					minHeight: 0,
+					margin: 0
 				});
 
 		if (textarea.css('position')!=='absolute')
