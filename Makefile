@@ -1,6 +1,5 @@
-MODULE = autogrow
-FILENAME_PREFIX = jquery.
-
-all: modularize minify
-
+all: copy minify
+	
 include ../../build/module.single.mk
+
+MODULE = autogrow
