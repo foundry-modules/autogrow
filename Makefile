@@ -1,11 +1,6 @@
-include ../../build/modules.mk
-
 MODULE = autogrow
-FILENAME = ${MODULE}.js
-SOURCE = ${SOURCE_DIR}/jquery.${MODULE}.js
-PRODUCTION = ${PRODUCTION_DIR}/${FILENAME}
-DEVELOPMENT = ${DEVELOPMENT_DIR}/${FILENAME}
+FILENAME_PREFIX = jquery.
 
-all:
-	${MODULARIZE} -n "${MODULE}" ${SOURCE} > ${DEVELOPMENT}
-	${UGLIFYJS} ${DEVELOPMENT} > ${PRODUCTION}
+all: modularize minify
+
+include ../../build/module.single.mk
